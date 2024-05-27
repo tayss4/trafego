@@ -3,6 +3,8 @@ package br.com.fiap.trafego.service;
 import br.com.fiap.trafego.model.Previsao;
 import br.com.fiap.trafego.repository.PrevisaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +14,7 @@ import java.util.Optional;
 public class PrevisaoService {
 
     @Autowired
-    private PrevisaoRepository previsaoRepository;
+    PrevisaoRepository previsaoRepository;
 
     public Previsao salvarPrevisao(Previsao previsao){
         return previsaoRepository.save(previsao);

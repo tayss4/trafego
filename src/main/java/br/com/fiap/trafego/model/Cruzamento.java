@@ -1,7 +1,7 @@
 package br.com.fiap.trafego.model;
 
-import jakarta.persistence.*;
 
+import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity

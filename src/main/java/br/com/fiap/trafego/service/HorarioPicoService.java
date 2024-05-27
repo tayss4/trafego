@@ -3,6 +3,8 @@ package br.com.fiap.trafego.service;
 import br.com.fiap.trafego.model.HorarioPico;
 import br.com.fiap.trafego.repository.HorarioPicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +14,7 @@ import java.util.Optional;
 public class HorarioPicoService {
 
     @Autowired
-    private HorarioPicoRepository horarioPicoRepository;
+    HorarioPicoRepository horarioPicoRepository;
 
     public HorarioPico salvarHorarioPico(HorarioPico horarioPico){
         return horarioPicoRepository.save(horarioPico);
