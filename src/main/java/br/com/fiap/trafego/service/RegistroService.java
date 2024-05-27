@@ -3,6 +3,8 @@ package br.com.fiap.trafego.service;
 import br.com.fiap.trafego.model.Registro;
 import br.com.fiap.trafego.repository.RegistroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +14,7 @@ import java.util.Optional;
 public class RegistroService {
 
     @Autowired
-    private RegistroRepository registroRepository;
+    RegistroRepository registroRepository;
 
     public Registro salvarRegistro(Registro registro){
         return registroRepository.save(registro);
