@@ -1,16 +1,13 @@
 package br.com.fiap.trafego.service;
 
-import br.com.fiap.trafego.model.Cruzamento;
-import br.com.fiap.trafego.repository.CruzamentoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
-import javax.management.RuntimeErrorException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.fiap.trafego.model.Cruzamento;
+import br.com.fiap.trafego.repository.CruzamentoRepository;
 
 @Service
 public class CruzamentoService {

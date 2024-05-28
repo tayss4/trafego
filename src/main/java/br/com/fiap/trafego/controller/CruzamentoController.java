@@ -29,12 +29,7 @@ public class CruzamentoController {
 
     @GetMapping("/cruzamentos/{id}")
     public Cruzamento buscarPorId(@PathVariable Long id){
-    	try {
-    		Cruzamento cruzamento = cruzamentoService.buscarPorId(id);
-    		return cruzamento;
-    	} catch (Exception e) {
-    		ErrorController.defaultErrorMsg();
-    	}
+    	Cruzamento cruzamento = cruzamentoService.buscarPorId(id);
         return cruzamentoService.buscarPorId(id);
     }
 

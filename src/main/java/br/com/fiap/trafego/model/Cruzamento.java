@@ -24,6 +24,11 @@ public class Cruzamento {
     @Column(name ="ds_logradouro_2")
     private String logradouro2;
 
+    
+    public Cruzamento(String logradouroA, String logradouroB) {
+    	this.logradouro1 = logradouroA;
+    	this.logradouro2 = logradouroB;
+    };
     public String getLogradouro1() {
         return logradouro1;
     }
